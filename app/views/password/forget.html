@@ -1,0 +1,47 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/common.css">
+<!-- head -->
+<div class="headBlock">
+    <div class="centerBlock">
+        <!-- logo -->
+        <img src="/img/01indexLOGO.png" class="headLogo" onclick="location.href='/'"/>
+        <span class="forgetPassTitle">忘记密码</span>
+    </div>
+</div>
+<!-- main -->
+<div class="forgetPassMain">
+    <img class="runBar" src="/img/42forgetPassBack1.png">
+    <table class="formTable">
+        <tr>
+            <td>注册邮箱：</td>
+            <td>
+                <input type="text" placeholder="请输入注册邮箱" class="normalInputText">
+                <span class="wrongMsg">
+							
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>验证码：</td>
+            <td>
+                <input type="text" placeholder="请输入验证码" class="codeInputText checkCode">
+                <img class="codeImg imgCode" src="<?php echo @$codeUrl; ?>">
+                <span class="wrongMsg">
+							
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="下一步" id="reset">
+                <span class="loginLink">想起来了，去<span class="blueSpan" onclick="window.location.href='/user/login'">登录</span></span>
+            </td>
+        </tr>
+        <input type="hidden" name="tokenName" value="<?php echo $this->security->getTokenKey() ?>" />
+        <input type="hidden" name="token" value="<?php echo $this->security->getToken() ?>" />
+    </table>
+</div>
+<!-- foot -->
+<div class="forgetFoot">
+    <span>Copyright © 2017 Bibox.com All righets Reserved</span>
+</div>
+<script src="/js/pages/user/password.js"></script>

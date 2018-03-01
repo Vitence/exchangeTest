@@ -1,0 +1,350 @@
+@import "public";
+.loginRegistBack{
+	width: 100%;
+	background-image: url('../../img/34loginRegistBack.jpg');
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	height: 520px;
+	text-align: center;
+	padding-top: 79px;
+	.logo{
+
+	}
+	.mainDialog{
+		background-color: @main_white;
+		padding: 0 50px;
+		padding-bottom: 50px;
+		margin: 0 auto;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		text-align: left;
+		border-radius: @other_radius;
+		.title{
+			font: @word_18cn;
+			color: @word_gray;
+			line-height: 74px;
+			height: 74px;
+		}
+		.formList{
+			.textRow{
+				margin-bottom: 19px;
+				&.lastText{
+					margin-bottom: 0;
+				}
+				input{
+					font: @word_14cn;
+					color: @word_gray;
+					height: 37px;
+					border: 1px solid #e5e5e5;
+					width: 266px;
+					border-radius: @other_radius;
+					padding-left: 32px;
+					background-repeat: no-repeat;
+					&.userName{
+						background-image: url('../../img/36userNameIcon.png');
+						background-position: 10px 50%;
+						&:focus{
+							background-image: url('../../img/37userNameFocus.png');
+						}
+					}
+					&.password{
+						background-image: url('../../img/38passwordIcon.png');
+						background-position: 13px 50%;
+						&:focus{
+							background-image: url('../../img/39passwordFocus.png');
+						}
+					}
+					&.checkCode{
+						width: 178px;
+						padding-left: 10px;
+					}
+					&:focus{
+						border-color: #65baff;
+					}
+				}
+				.checkCodeImg{
+					height: 37px;
+					width: 103px;
+					vertical-align: middle;
+					margin-bottom: 2px;
+				}
+			}
+			.wrongMsgRow{
+				font: @word_12cn;
+				color: @word_red;
+				height: 46px;
+				line-height: 46px;
+				img{
+					vertical-align: middle;
+					margin-bottom: 1px;
+				}
+				span{
+
+				}
+			}
+			.btnRow{
+				input{
+					width: 300px;
+					border: 0;
+					height: 41px;
+					background-color: @btn_lightorange;
+					color: @word_white;
+					font: @word_16cn;
+					border-radius: @btn_radius;
+					&:hover{
+						cursor: pointer;
+						opacity: 0.8;
+					}
+				}
+			}
+			.linkRow{
+				margin-top: 11px;
+				font: @word_14cn;
+				color: @word_lightgray;
+				input{
+					vertical-align: bottom;
+					margin-bottom: 4px;
+				}
+				.graySpan{
+					color: @word_lightgray;
+					&:hover{
+						cursor: pointer;
+						text-decoration: underline;
+					}
+				}
+				.blueSpan{
+					color: @word_blue;
+					&:hover{
+						cursor: pointer;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		&.loginBlock{
+			width: 300px;
+		}
+		&.registBlock{
+			width: 300px;
+		}
+		&.registSuccessBlock{
+			width: 300px;
+			text-align: center;
+			padding-top: 121px;
+			.registSuccessTitle{
+				font: @word_22cn;
+				img{
+					vertical-align: middle;
+					margin-bottom: 2px;				
+				}
+			}
+			.registSuccessWord{
+				margin-top: 32px;
+				font: @word_14cn;
+				color: @word_gray;
+			}
+			.registSuccessBtn{
+				margin-top: 61px;
+				margin-bottom: 40px;
+				input{
+					width: 300px;
+					border: 0;
+					height: 41px;
+					background-color: @btn_lightorange;
+					color: @word_white;
+					font: @word_16cn;
+					border-radius: @btn_radius;
+					&:hover{
+						cursor: pointer;
+						opacity: 0.8;
+					} 
+				}
+			}
+		}
+	}
+}
+.loginRegistFoot{
+	margin-top: 136px;
+	border-top: 1px solid #e0e0e0;
+	text-align: center;
+	padding-top: 37px;
+	font: @word_14en;
+	color: @word_gray;
+}
+.headBlock{
+	.forgetPassTitle{
+		display: inline-block;
+		height: 46px;
+		font: @word_20cn;
+		line-height: 46px;
+		color: @word_black;
+		margin-left: 25px;
+		padding-left: 30px;
+		border-left:2px solid #e0e0e0;
+		vertical-align: middle;
+	}
+}
+.formTable{
+	width: 100%;
+	tr{
+		td{
+			font:@word_14cn;
+			color: @word_black;
+			padding-bottom: 19px;
+			&:first-child{
+				width: 318px;
+				text-align: right;
+			}
+			&:last-child{
+				text-align: left;	
+			}
+			input[type=text],input[type=password]{
+				border: 1px solid #e0e0e0;
+				padding:0 10px;
+				height: 30px;
+				border-radius: @other_radius;
+				&.normalInputText{
+					width: 280px;
+				}
+				&.codeInputText{
+					width: 130px;
+				}
+				&.rollOutNumberInputText{
+					width: 230px;
+				}
+			}
+			input[type=button]{
+				width: 100px;
+				height: 36px;
+				border: 0;
+				background-color: @btn_orange;
+				color: @word_white;
+				border-radius: @btn_radius;
+				&:hover{
+					cursor: pointer;
+					opacity: 0.8;
+				}
+			}
+			.codeImg{
+				width: 90px;
+				height: 30px;
+				vertical-align: middle;
+				margin-bottom: 2px;
+			}
+			.wrongMsg{
+				display: none;
+				img{
+					width: 15px;
+					vertical-align: middle;
+					margin-bottom: 2px;
+				}
+				.wrongWords{
+					font: @word_12cn;
+					color: @word_red;
+				}
+			}
+			.realRollOutBlock{
+				top: 40px;
+				left: 10px;
+				font: @word_12cn;
+				color: @word_orange;
+				position: absolute;
+				display: block;
+			}
+		}
+		&:last-child{
+			td{
+				padding-top: 19px;
+				text-align: center;
+			}
+		}
+	}
+}
+.forgetPassMain{
+	width: 880px;
+	padding: 0 160px;
+	min-height: 500px;
+	margin:31px auto;
+	padding-top: 40px;
+	background-color: @main_white;
+	text-align: center;
+	img{
+		width: 100%;
+
+	}
+	.formTable{
+		margin-top: 90px;
+		tr{
+			td{
+				.loginLink{
+					font: @word_12cn;
+					color: @word_lightgray;
+					line-height: 37px;
+					margin-left: 10px;
+					.blueSpan{
+						color: @word_blue;
+						&:hover{
+							cursor: pointer;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+	.sendMailSuccessTitle{
+		margin-top: 96px;
+		img{
+			width: 26px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+		font:@word_14cn;
+		color: @word_gray;
+		.receiveEmail{
+			font: @word_16en;
+			color: @word_black;
+		}
+	}
+	.sendMailSuccessWord{
+		margin-top: 30px;
+		font: @word_12cn;
+		color: @word_gray;
+	}
+	.sendMailSuccessSupplement{
+		margin-top: 41px;
+		font: @word_12cn;
+		color: @word_orange;
+	}
+	.resetPassSuccess{
+		margin-top: 96px;
+		img{
+			width: 26px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+		font:@word_22cn;
+		color: @word_black;
+	}
+	.resetPassSuccessBtn{
+		margin-top: 50px;
+		width: 100px;
+		height: 36px;
+		border: 0;
+		background-color: @btn_orange;
+		color: @word_white;
+		border-radius: @btn_radius;
+		&:hover{
+			cursor: pointer;
+			opacity: 0.8;
+		}
+	}
+}
+.forgetFoot{
+	height: 107px;
+	background-color: @main_white;
+	border-top: 1px solid #e0e0e0;
+	font:@word_14en;
+	color: @word_gray;
+	line-height: 100px;
+	text-align: center;
+}

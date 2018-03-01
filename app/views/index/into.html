@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="../css/pages/accountInfo.css">
+<!-- main -->
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft') ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：账户信息-转入</span>
+                    <span class="mb_layout_floatRight conversionRate">1元=1z数据</span>
+                </p>
+                <div class="rollInContent">
+                    <p class="title">
+                        <img src="/img/46rollInTitleIcon.png">
+                        <span>转入申请表</span>
+                    </p>
+                    <table class="formTable">
+                        <tr>
+                            <td>转入金额：</td>
+                            <td class="mb_layout_relative">
+                                <input type="text" placeholder="请输入您要转出的金额" class="normalInputText number">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>开户人姓名：</td>
+                            <td>
+                                <input type="text" placeholder="请输入开户人姓名" class="normalInputText card_name">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>银行卡号：</td>
+                            <td>
+                                <input type="text" placeholder="请填写要转出的银行卡号" class="normalInputText card">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>验证码：</td>
+                            <td>
+                                <input type="text" placeholder="请输入验证码" class="codeInputText imgCode">
+                                <img class="codeImg" src="<?php echo @$codeUrl; ?>">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" value="确认提交" id="submit">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="cartInfo">
+                        <p class="title">
+                            <img src="/img/47cardInfoTitleIcon.png">
+                            <span>银行卡信息</span>
+                        </p>
+                        <p class="cardInfoWords">
+                            开户人姓名：欧阳楠
+                        </p>
+                        <p class="cardInfoWords">
+                            银行卡号：6217001830019133569
+                        </p>
+                        <p class="cardInfoWords">
+                            开户行：浙江省杭州市滨江区招商银行钱塘支行
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+</div>
+<input type="hidden" name="tokenName" value="<?php echo $this->security->getTokenKey() ?>" />
+<input type="hidden" name="token" value="<?php echo $this->security->getToken() ?>" />
+<script src="/js/pages/index/into.js"></script>

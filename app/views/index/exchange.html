@@ -1,0 +1,56 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/accountInfo.css">
+<!-- main -->
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft'); ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：账户信息-兑换记录</span>
+                </p>
+                <div class="exchangeContent">
+                    <p class="title">
+                        <img src="/img/25exchangeRecordIcon.png
+								">
+                        <span>兑换记录</span>
+                    </p>
+                    <div class="queryBlock">
+                        <div class="queryGroup">
+                            <span>日期：</span>
+                            <input type="date"  class="dateForm startTime" placeholder=""> -
+                            <input type="date"  class="dateForm endTime" placeholder="">
+                        </div>
+                        <div class="queryGroup">
+                            <span>商家名称：</span>
+                            <input type="text"  class="selectForm" placeholder="全部" readonly="readonly">
+                            <ul class="selectList">
+                                <li data-id="0">全部</li>
+                                <?php if(!empty($business)): ?>
+                                <?php foreach ($business as $item): ?>
+                                    <li data-id="<?php echo $item['id'] ?>"><?php echo $item['name'] ?></li>
+                                <?php endforeach; ?>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                    </div>
+                    <table class="recordTable">
+                        <tr class="titleRow">
+                            <td>日期</td>
+                            <td>商品名称</td>
+                            <td>单价</td>
+                            <td>数量</td>
+                            <td>金额</td>
+                            <td>商家</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+</div>
+<script src="/js/page.js"></script>
+<script src="/js/pages/index/exchange.js"></script>

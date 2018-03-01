@@ -1,0 +1,41 @@
+<?php $action = \Phalcon\Di::getDefault()->getDispatcher()->getActionName(); ?>
+<div class="leftNavBlock">
+    <ul>
+        <li class="firstLevel" <?php echo strtolower($action) == 'index' ? 'checked' : '' ?> onclick="location.href='/'">
+            <p class="exchangeShop">兑换商城</p>
+        </li>
+        <li class="firstLevel">
+            <p class="accountInfo">账户信息</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'into' || strtolower($action) == 'intosuccess' ? 'checked' : '' ?>" onclick="location.href='/index/into'">
+            <p>转入</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'out' || strtolower($action) == 'outsuccess' ? 'checked' : '' ?>" onclick="location.href='/index/out'">
+            <p>转出</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'assets' ? 'checked' : '' ?>" onclick="location.href='/index/assets'">
+            <p>资产详情</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'order' ? 'checked' : '' ?>" onclick="location.href='/index/order'">
+            <p>转入/转出记录</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'exchange' ? 'checked' : '' ?>" onclick="location.href='/index/exchange'">
+            <p>兑换记录</p>
+        </li>
+        <li class="firstLevel ">
+            <p class="personalCenter">个人中心</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'setloginpass' ? 'checked' : '' ?>" onclick="location.href='/index/setloginpass'">
+            <p>登录密码修改</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'settradingpass' ? 'checked' : '' ?>" onclick="location.href='/index/settradingpass'">
+            <p>交易密码修改</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'authentication' || strtolower($action) == 'authenticationing' || strtolower($action) == 'authenticationsuccess' || strtolower($action) == 'authenticationfaile' ? 'checked' : '' ?>" onclick="location.href='/index/authentication'">
+            <p>身份认证</p>
+        </li>
+        <li class="secondLevel <?php echo strtolower($action) == 'complete' ? 'checked' : '' ?>" onclick="location.href='/index/complete'">
+            <p>补充信息</p>
+        </li>
+    </ul>
+</div>

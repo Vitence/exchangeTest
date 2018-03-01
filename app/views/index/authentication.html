@@ -1,0 +1,109 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/personCenter.css">
+<!-- main -->
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft'); ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：个人中心-身份认证</span>
+                </p>
+                <div class="identityInfoContent">
+                    <p class="title">
+                        <img src="/img/28identityCheckTitleIcon.png">
+                        <span>身份认证</span>
+                    </p>
+                    <p class="progressBar">
+                        <img src="/img/29identityCheckInfo.png">
+                    </p>
+                    <table class="formTable">
+                        <tr>
+                            <td>姓名：</td>
+                            <td>
+                                <input type="text" placeholder="请输入真实姓名" class="normalInputText name">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>身份证：</td>
+                            <td>
+                                <input type="text" placeholder="请输入有效身份证号" class="normalInputText card_number">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>请上传身份证正面照：</td>
+                            <td>
+                                <div class="uploadImgBlock"  onclick="cardJust()">
+                                    <img class="uploadIcon" src="/img/14uploadImg.png" id="card_just_view">
+                                    <p>
+                                        <span>上传附件</span>
+                                    </p>
+                                </div>
+                                <input type="file" id="card_just" hidden="hidden">
+                                <span class="imgRequire">图片格式仅支持: <br/>JPG、JPEG、PNG、BMP，大小不超过5M</span>
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>请上传身份证反面照：</td>
+                            <td>
+                                <div class="uploadImgBlock"  onclick="cardBack()" >
+                                    <img class="uploadIcon" src="/img/14uploadImg.png" id="card_back_view">
+                                    <p>
+                                        <span>上传附件</span>
+                                    </p>
+                                </div>
+                                <input type="file" id="card_back" hidden="hidden">
+                                <span class="imgRequire">图片格式仅支持: <br/>JPG、JPEG、PNG、BMP，大小不超过5M</span>
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>请上传手持身份证照：</td>
+                            <td>
+                                <div class="uploadImgBlock" onclick="cardHand()" >
+                                    <img class="uploadIcon" src="/img/14uploadImg.png"  id="card_hand_view">
+                                    <p>
+                                        <span>上传附件</span>
+                                    </p>
+                                </div>
+                                <input type="file" id="card_hand" hidden="hidden">
+                                <span class="imgRequire">图片格式仅支持: <br/>JPG、JPEG、PNG、BMP，大小不超过5M</span>
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="imgExplainBlock">
+                                    <p class="imgExplainTitle">示例照片：</p>
+                                    <div class="imgBlock">
+                                        <img src="/img/15imgExample1.jpg">
+                                        <img src="/img/16imgExample2.jpg">
+                                        <img src="/img/17imgExample3.jpg">
+                                    </div>
+                                    <p class="imgExplainWords">
+                                        请确认身份证照片正反面，内容清晰可见，<br/>照相时，持身份证的手臂要伸直，要确认照片放大后，身份证号码清晰可辨，否则<span>无法认证通过</span>
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" value="确认提交" id="submit">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+    <input type="hidden" name="tokenName" value="<?php echo $this->security->getTokenKey() ?>" />
+    <input type="hidden" name="token" value="<?php echo $this->security->getToken() ?>" />
+</div>
+<script src="/js/pages/index/auth.js"></script>

@@ -1,0 +1,77 @@
+// @import "../lib/styleLib";
+@import "public";
+.indexContent{
+	.queryBlock{
+		height: 72px;
+		font: @word_14cn;
+		line-height: 72px;
+		color: @word_black;
+		.queryGroup{
+			.selectForm{
+				width: 198px;
+				background-position: 210px 50%;
+			}
+			.selectList{
+				top: 31px;
+				li{
+					width: 220px;
+				}
+			}
+		}
+	}
+	.goodsListBlock{
+		text-align: center;
+		.eachGoodsBlock{
+			display: inline-block;
+			width: 289px;
+			border: 1px solid #e0e0e0;
+			padding-bottom: 19px;
+			margin-bottom: 5px;
+			img{
+				width: 100%;
+			}
+			p{
+				line-height: 36px;
+				padding: 0 11px;
+				width: 259px;
+				text-align: left;
+				&.goodstitle{
+					font: @word_16cn;
+					color: @word_black;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+				}
+				&.goodsInfo{
+					.goodsPrice{
+						color: @word_orange;
+						font: @word_18en;
+					}
+					.priceUnit{
+						color: @word_gray;
+						font: @word_14cn;
+					}
+				}
+				&.contactSaler{
+					font: @word_14cn;
+					color: @word_lightgray;
+					span{
+						&:hover{
+							text-decoration: underline;
+							cursor: pointer;
+						}
+					}
+				}
+				img{
+					width: 16px;
+					vertical-align: middle;
+					margin-bottom: 3px;
+				}
+			}
+		}
+	}
+	.pageingBlock{
+		padding-top: 34px;
+		padding-bottom: 54px;
+	}
+}

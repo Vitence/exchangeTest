@@ -1,0 +1,72 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/personCenter.css">
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft') ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：个人中心-登录密码修改</span>
+                </p>
+                <div class="changePassContent">
+                    <p class="title">
+                        <img src="/img/26changeLoginPass.png">
+                        <span>登录密码修改</span>
+                    </p>
+                    <table class="formTable">
+                        <tr>
+                            <td>原登录密码：</td>
+                            <td>
+                                <input type="password" placeholder="请输入原登录密码" class="normalInputText"  id="oldPassword">
+                                <span class="wrongMsg">
+                                
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>新登录密码：</td>
+                            <td>
+                                <input type="password" placeholder="请输入新登录密码" class="normalInputText" id="password">
+                                <span class="wrongMsg">
+                                
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>确认新登录密码：</td>
+                            <td>
+                                <input type="password" placeholder="请再次输入新登录密码" class="normalInputText" id="passwordAgain">
+                                <span class="wrongMsg">
+                                
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" value="确认提交" id="edit">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="changePassSuccessContent" style="display: none">
+                    <p class="successTitle">
+                        <img src="/img/26changeLoginPass.png">
+                        <span>密码修改成功！</span>
+                    </p>
+                    <p class="successExplain">
+                        <span>恭喜您修改成功，请重新登录</span>
+                    </p>
+                    <p class="successBtn">
+                        <input type="button" value="去登录" onclick="location.href='/user/login'">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+    <input type="hidden" name="tokenName" value="<?php echo $this->security->getTokenKey() ?>" />
+    <input type="hidden" name="token" value="<?php echo $this->security->getToken() ?>" />
+</div>
+<script src="/js/pages/security/loginpass.js"></script>

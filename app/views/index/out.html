@@ -1,0 +1,96 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/accountInfo.css">
+<!-- main -->
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft'); ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：账户信息-转出</span>
+                    <span class="mb_layout_floatRight conversionRate">1z数据=0.99元</span>
+                </p>
+                <div class="rollOutContent">
+                    <p class="title">
+                        <img src="/img/21rollOutTitleIcon.png">
+                        <span>转出申请表</span>
+                    </p>
+                    <table class="formTable">
+                        <tr>
+                            <td>姓名：</td>
+                            <td>
+                                <input type="text" placeholder="请填写您的姓名" class="normalInputText name">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>身份证号：</td>
+                            <td>
+                                <input type="text" placeholder="请输入有效身份证" class="normalInputText cardNumber">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>验证码：</td>
+                            <td>
+                                <input type="text" placeholder="请输入验证码" class="codeInputText imgCode">
+                                <img class="codeImg" src="<?php echo @$codeUrl; ?>">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>转出金额：</td>
+                            <td class="mb_layout_relative">
+                                <input type="text" placeholder="请输入您要转出的金额" class="rollOutNumberInputText number">
+                                <span class="wrongMsg"></span>
+                                <p class="realRollOutBlock">
+                                    <span>到账金额：</span>
+                                    <span class="realRollOutNumber">0元</span>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>交易密码：</td>
+                            <td>
+                                <input type="password" placeholder="请输入交易密码" class="normalInputText payPassword">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>银行卡号：</td>
+                            <td>
+                                <input type="text" placeholder="请填写要转出的银行卡号" class="normalInputText card">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>开户人姓名：</td>
+                            <td>
+                                <input type="text" placeholder="请输入开户人姓名" class="normalInputText cardName">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>开户行：</td>
+                            <td>
+                                <input type="text" placeholder="请输入开户行" class="normalInputText cardOpen">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" value="确认提交" id="out">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <input type="hidden" name="tokenName" value="<?php echo $this->security->getTokenKey() ?>" />
+            <input type="hidden" name="token" value="<?php echo $this->security->getToken() ?>" />
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+</div>
+<script src="/js/pages/index/out.js"></script>

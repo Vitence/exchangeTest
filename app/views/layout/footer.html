@@ -1,0 +1,19 @@
+<?php $controller = \Phalcon\Di::getDefault()->getDispatcher()->getControllerName(); ?>
+<?php if(strtolower($controller) != 'user'): ?>
+    <div class="footBlock">
+        <div class="centerBlock">
+            <p class="outLinkBlock">
+                <span class="titile">友情链接：</span>
+                <span class="outLink">薪火网</span>
+            </p>
+            <p class="otherLinkBlock">
+                <span class="otherLink">价格API</span>
+                <span class="otherLink">服务协议</span>
+                <span class="emailSpan">服务邮箱：z-dataService@163.com</span>
+                <span class="emailSpan">商务合作：z-dataCompany@163.com</span>
+                <span class="mb_layout_floatRight rightPart">
+Copyright © 2017 Bibox.com All righets Reserved</span>
+            </p>
+        </div>
+    </div>
+<?php endif; ?>

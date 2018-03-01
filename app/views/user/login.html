@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/common.css">
+<div class="loginRegistBack">
+    <img src="/img/35loginRegistLogo.png" class="logo" onclick="location.href='/'">
+    <div class="mainDialog loginBlock">
+        <p class="title">
+            <span>用户登录</span>
+        </p>
+        <ul class="formList">
+            <li class="textRow">
+                <input type="text" class="userName" placeholder="请输入注册邮箱" id="email">
+            </li>
+            <li class="textRow">
+                <input type="password" class="password" placeholder="请输入登录密码" id="password">
+            </li>
+            <li class="textRow lastText">
+                <input type="text" class="checkCode" placeholder="请输入验证码" id="imgCode">
+                <img class="checkCodeImg imgCode" src="<?php echo @$codeUrl; ?>">
+            </li>
+            <li class="wrongMsgRow">
+            
+            </li>
+            <li class="btnRow">
+                <input type="button" value="登录" id="login">
+            </li>
+            <li class="linkRow">
+                <span class="graySpan" onclick="location.href='/password/forget'">忘记密码？</span>
+                <span class="mb_layout_floatRight blueSpan" onclick="location.href='/user/register'">立即注册</span>
+            </li>
+            <input type="hidden" name="tokenName" value="<?php echo $this->security->getTokenKey() ?>" />
+            <input type="hidden" name="token" value="<?php echo $this->security->getToken() ?>" />
+        </ul>
+    </div>
+</div>
+<p class="loginRegistFoot">
+    <span>Copyright © 2017 Bibox.com All righets Reserved</span>
+</p>
+<script src="/js/pages/user/login.js"></script>

@@ -1,0 +1,77 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/personCenter.css">
+<!-- main -->
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft'); ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：个人中心-补充信息</span>
+                </p>
+                <div class="rollOutContent">
+                    <p class="title">
+                        <img src="../img/33supplementInfo.png">
+                        <span>补充信息</span>
+                    </p>
+                    <table class="formTable">
+                        <tr>
+                            <td>姓名：</td>
+                            <td>
+                                <input type="text" value="<?php echo @$user['name'] ?>" placeholder="请填写您的姓名" class="normalInputText name">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>手机：</td>
+                            <td>
+                                <input type="text" value="<?php echo @$user['phone'] ?>" placeholder="请输入有效手机号" class="normalInputText phone">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>常用银行卡号：</td>
+                            <td>
+                                <input type="text" value="<?php echo @$user['card_number'] ?>" placeholder="请输入常用银行卡号" class="normalInputText card">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>常用银行卡开户行：</td>
+                            <td>
+                                <input type="text" value="<?php echo @$user['card_open'] ?>" placeholder="请输入常用银行卡开户行" class="normalInputText cardOpen">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>开户人姓名：</td>
+                            <td>
+                                <input type="text" value="<?php echo @$user['card_name'] ?>" placeholder="请输入开户人姓名" class="normalInputText cardName">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>验证码：</td>
+                            <td>
+                                <input type="text" placeholder="请输入验证码" class="codeInputText imgCode">
+                                <img class="codeImg" src="<?php echo @$codeUrl; ?>">
+                                <span class="wrongMsg"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" value="确认提交" id="complete">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <input type="hidden" name="tokenName" value="<?php echo $this->security->getTokenKey() ?>" />
+                <input type="hidden" name="token" value="<?php echo $this->security->getToken() ?>" />
+            </div>
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+</div>
+<script src="/js/pages/index/complete.js"></script>

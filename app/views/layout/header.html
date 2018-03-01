@@ -1,0 +1,33 @@
+<?php $controller = \Phalcon\Di::getDefault()->getDispatcher()->getControllerName(); ?>
+<?php if(strtolower($controller) != 'user'): ?>
+    <div class="headBlock">
+        <div class="centerBlock">
+            <!-- logo -->
+            <img src="/img/01indexLOGO.png" class="headLogo" onclick="location.href='/'"/>
+            <!-- right part -->
+            <div class="mb_layout_floatRight rightPart">
+                <div class="headAccount">
+                    <img src="/img/04headAccountIcon.png">
+                    <span class="userName"><?php echo @$userInfo['email'] ?></span>
+                    <ul>
+                        <li>
+                            <img src="/img/05headPropertyIcon.png">
+                            <span><?php echo @$userInfo['balance'] ?></span>
+                        </li>
+                        <li>
+                            <img src="/img/07headLogoutIcon.png">
+                            <span onclick="window.location.href='/user/logout'">退出账户</span>
+                        </li>
+                    </ul>
+                </div>
+                <input type="button" value="转入" onclick="location.href='accountInfo_rollIn.html'">
+                <input type="button" value="去交易" onclick="location.href='http://www.xinhuodata.com/transaction'">
+            </div>
+            <!-- clear float -->
+            <div class="mb_layout_clearBoth"></div>
+        </div>
+    </div>
+<?php endif; ?>
+
+
+

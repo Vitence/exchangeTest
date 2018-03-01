@@ -1,0 +1,51 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/accountInfo.css">
+<!-- main -->
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft'); ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：账户信息-转入/转出记录</span>
+                </p>
+                <div class="inOutContent">
+                    <p class="title">
+                        <img src="../img/24inOutIcon.png">
+                        <span>转入/转出记录</span>
+                    </p>
+                    <div class="queryBlock">
+                        <div class="queryGroup">
+                            <span>日期：</span>
+                            <input type="date"  class="dateForm startTime" placeholder=""> -
+                            <input type="date"  class="dateForm endTime" placeholder="">
+                        </div>
+                        <div class="queryGroup">
+                            <span>操作类型：</span>
+                            <input type="text"  class="selectForm"  placeholder="全部" readonly="readonly">
+                            <ul class="selectList">
+                                <li data-type="0">全部</li>
+                                <li data-type="1">转入</li>
+                                <li data-type="2">转出</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <table class="recordTable">
+                        <tr class="titleRow">
+                            <td>日期</td>
+                            <td>数量</td>
+                            <td>金额</td>
+                            <td>操作</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+</div>
+<script src="/js/page.js"></script>
+<script src="/js/pages/index/order.js"></script>

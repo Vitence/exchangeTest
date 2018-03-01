@@ -1,0 +1,223 @@
+@import "public";
+.formTable{
+	width: 100%;
+	tr{
+		td{
+			font:@word_14cn;
+			color: @word_black;
+			padding-bottom: 19px;
+			&:first-child{
+				width: 318px;
+				text-align: right;
+			}
+			&:last-child{
+				text-align: left;	
+			}
+			input[type=text],input[type=password]{
+				border: 1px solid #e0e0e0;
+				padding:0 10px;
+				height: 30px;
+				border-radius: @other_radius;
+				&.normalInputText{
+					width: 280px;
+				}
+				&.codeInputText{
+					width: 130px;
+				}
+				&.rollOutNumberInputText{
+					width: 230px;
+				}
+			}
+			input[type=button]{
+				width: 100px;
+				height: 36px;
+				border: 0;
+				background-color: @btn_orange;
+				color: @word_white;
+				border-radius: @btn_radius;
+				&:hover{
+					cursor: pointer;
+					opacity: 0.8;
+				}
+			}
+			.codeImg{
+				width: 90px;
+				height: 30px;
+				vertical-align: middle;
+				margin-bottom: 2px;
+			}
+			.wrongMsg{
+				display: none;
+				img{
+					width: 15px;
+					vertical-align: middle;
+					margin-bottom: 2px;
+				}
+				.wrongWords{
+					font: @word_12cn;
+					color: @word_red;
+				}
+			}
+			.realRollOutBlock{
+				top: 40px;
+				left: 10px;
+				font: @word_12cn;
+				color: @word_orange;
+				position: absolute;
+				display: block;
+			}
+		}
+		&:last-child{
+			td{
+				padding-top: 19px;
+				text-align: center;
+			}
+		}
+	}
+}
+.title{
+	text-align: center;
+	font: @word_18cn;
+	height: 76px;
+	line-height: 76px;
+	img{
+		width: 18px;
+		vertical-align: middle;
+		margin-bottom: 3px;
+	}
+}
+.progressBar{
+	text-align: center;
+}
+.changePassSuccessContent{
+	text-align: center;
+	.successTitle{
+		padding-top: 102px;
+		margin-bottom: 32px;
+		font: @word_22cn;
+		color: @word_black;
+		height: 27px;
+		line-height: 27px;
+		img{
+			width: 27px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+	}
+	.successExplain{
+		font:@word_14cn;
+		color: @word_gray;
+	}
+	.successBtn{
+		margin-top: 29px;
+		input{
+			width: 100px;
+			height: 36px;
+			border: 0;
+			background-color: @main_orange;
+			color: @word_white;
+			font: @word_14cn;
+			border-radius: @btn_radius;
+			&:hover{
+				cursor: pointer;
+				opacity: 0.8;
+			}
+		}
+	}
+}
+.identityInfoContent{
+	.formTable{
+		margin-top:31px;
+		tr{
+			td{
+				&:first-child{
+					width: 246px;
+				}
+				.uploadImgBlock{
+					width: 74px;
+					height: 63px;
+					padding-top: 11px;
+					border: 1px solid #e0e0e0;
+					display: inline-block;
+					text-align: center;
+					background-color: #f9fafc;
+					.uploadIcon{
+						width: 48px;
+						opacity: 0.3;
+					}
+					.idImg{
+						width: 100%;
+					}
+					p{
+						font: @word_12cn;
+						color: @word_lightgray;
+					}
+					
+					&:hover{
+						cursor: pointer;
+						opacity: 0.8;
+					}
+				}
+				.imgRequire{
+					display: inline-block;
+					vertical-align: middle;
+					font: @word_12cn;
+					color: @word_lightgray;
+				}
+				.imgExplainBlock{
+					width: 528px;
+					height: 290px;
+					padding: 0 16px;
+					border: 1px dashed #cecece;
+					background-color: #f9fafc;
+					.imgExplainTitle{
+						height: 53px;
+						text-align: left;
+						font: @word_16cn;
+						color: @word_gray;
+						line-height: 53px;
+					}
+					.imgExplainWords{
+						font: @word_12cn;
+						color: @word_lightgray;
+						line-height: 22px;
+						span{
+							color: @word_gray;
+						}
+					}
+				}
+			}
+			&:last-child{
+				td{
+					padding-bottom: 55px;
+				}
+			}
+		}
+	}
+}
+.identitySubmitAfterContent{
+	.resultBlock{
+		padding-top: 57px;
+		text-align: center;
+		img{
+			width: 100px;
+			margin-bottom: 22px;
+		}
+		.resultTitle{
+			font: @word_22cn;
+			color: @word_black;
+			margin-bottom: 19px;
+		}
+		.resultWords{
+			font: @word_14cn;
+			color: @word_gray;
+			.reForm{
+				color: @word_blue;
+				&:hover{
+					cursor: pointer;
+					text-decoration: underline;
+				}
+			}
+		}
+	}	
+}

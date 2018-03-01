@@ -1,0 +1,327 @@
+@import "../lib/styleLib";
+.centerBlock{
+	width: 1200px;
+	margin: auto;
+	height: 100%;
+}
+.headBlock{
+	height: 95px;
+	border-top: 5px solid @main_orange;
+	background-color: @main_white;
+	width: 100%;
+	line-height: 95px;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+	.headLogo{
+		width: 265px;
+		height: 50px;
+		vertical-align: middle;
+	}
+	.rightPart{
+		.headAccount{
+			display: inline-block;
+			position: relative;
+			background-image: url("../../img/02headAccountDownIcon.jpg");
+			background-repeat: no-repeat;
+			background-position: right center;
+			margin-right: 15px;
+			font: @word_14en;
+			line-height: inherit;
+			color: @word_black;
+			img{
+				vertical-align: middle;
+				margin-bottom: 3px;
+			}
+			.userName{
+				margin-right: 20px;
+			}
+			&:hover{
+				cursor: pointer;
+				background-image: url("../../img/03headAccountUpIcon.jpg");
+				color: @word_orange;
+				ul{
+					display: block;
+				}
+			}
+			ul{
+				position: absolute;
+				display: none;
+				border-top: 3px solid @main_orange;
+				width: 100%;
+				background-color: @main_white;
+				top:65px;
+				box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+				li{
+					height: 50px;
+					margin:0 10px;
+					font: @word_14cn;
+					color: @word_gray;
+					line-height: 50px;
+					border-bottom: 1px solid @main_darkwhite;
+					img{
+						width: 17px;
+						opacity: 0.5;
+					}
+					&:hover{
+						color: @word_orange;
+					}
+					&:nth-child(2){
+						border: 0;
+					}
+				}
+			}
+		}
+		input{
+			width: 80px;
+			height: 30px;
+			border: 0;
+			background-color: @btn_orange;
+			font: @word_14cn;
+			border-radius: @btn_radius;
+			color: @word_white;
+			&:hover{
+				cursor: pointer;
+				opacity: 0.8;
+			}
+		}
+	}
+}
+.mainBlock{
+	margin-top: 30px;
+	.leftNavBlock{
+		width: 250px;
+		background-color: @main_white;
+		padding-bottom: 40px;
+		ul{
+			li{
+				height: 50px;
+				padding-left: 15px;
+				padding-right: 20px;
+				line-height: 50px;
+				border-left:5px solid @main_white;
+				&.firstLevel{
+					font: @word_18cn;
+					color: @word_black;
+					line-height: inherit;
+					p{
+						height: 100%;
+						border-bottom: 1px solid @main_darkwhite;
+						background-size: 20px;
+						background-position: left center;
+						background-repeat: no-repeat;
+						padding-left: 28px;
+						line-height: 50px;
+						&.exchangeShop{
+							background-image: url("../../img/08leftNavIcon1.png");
+						}
+						&.accountInfo{
+							background-image: url("../../img/09leftNavIcon2.png");
+						}
+						&.personalCenter{
+							background-image: url("../../img/10leftNavIcon3.png");
+						}
+					}
+					&.checked{
+						p{
+							&.exchangeShop{
+								background-image: url("../../img/11leftNavIconChecked.png");
+							}
+						}
+					}
+				}
+				&.secondLevel{
+					color: @word_gray;
+					p{
+						border-bottom: 1px solid @main_darkwhite;
+						padding-left:30px;
+						font: @word_14cn;
+						line-height: inherit;
+					}
+					&:hover{
+						background-color: #fdf6eb;
+						border-color: @main_orange;
+						cursor: pointer;
+					}
+					&.checked{
+						&:hover{
+							background-color: @main_orange;
+							border-color: @main_orange;
+							cursor: default;
+						}
+					}
+				}
+				&.checked{
+					color: @word_white;
+					background-color: @main_orange;
+					border-color: @main_orange;
+				}
+				&:nth-child(1){
+					&:hover{
+						background-color: #fdf6eb;
+						border-color: @main_orange;
+						cursor: pointer;
+					}
+					&.checked{
+						&:hover{
+							background-color: @main_orange;
+							border-color: @main_orange;
+							cursor: default;
+						}
+					}
+				}
+				&:last-child{
+					p{
+						border-bottom: 1px solid @main_darkwhite;
+					}
+				}
+			}
+		}
+	}
+	.mainContentBlock{
+		background: @main_white;
+		width: 890px;
+		padding: 0 20px;
+		min-height: 640px;
+		.titleBlock{
+			height: 50px;
+			font: @word_14cn;
+			color: @word_gray;
+			line-height: 50px;
+			border-bottom: 1px solid #e0e0e0;
+		}
+		.queryGroup{
+			display: inline-block;
+			position: relative;
+			line-height: inherit;
+			font: @word_14cn;
+			input{
+				border: 1px solid #e0e0e0;
+				border-radius: @other_radius;
+				height: 30px;
+				&.selectForm{
+					padding-left: 10px;
+					padding-right: 22px;
+					background-image: url("../../img/12querySelectDown.jpg");
+					background-repeat: no-repeat;
+					&:hover{
+						cursor: pointer;
+					}
+					&:focus{
+						&+ul{
+							display: block;
+						}
+					}
+				}
+			}
+			.selectList{
+				display: none;
+				position: absolute;
+				right: 0;
+				border:1px solid #e0e0e0;
+				border-radius: @other_radius;
+				li{
+					height: 40px;
+					font: @word_14cn;
+					color: @word_black;
+					line-height: 40px;
+					padding-left: 10px;
+					background-color: @main_white;
+					&:hover{
+						background-color: @main_orange;
+						color: @word_white;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		.pageingBlock{
+			text-align: center;
+			span{
+				display: inline-block;
+				min-width: 7px;
+				height: 27px;
+				font: @word_14cn;
+				line-height: 27px;
+				color: @word_gray;
+				&.clickable{
+					border: 1px solid #e0e0e0;
+					border-radius: @other_radius;
+					padding: 0 12px;
+					&:hover{
+						cursor: pointer;
+						color: @word_orange;
+					}
+					&.checked{
+						border-color: @main_orange;
+						background-color: @main_orange;
+						color: @word_white;
+						&:hover{
+							cursor: default;
+							color: @word_white;
+						}
+					}
+				}
+			}
+			input{
+				border:1px solid #e0e0e0;
+				padding: 0 8px;
+				border-radius: @other_radius;
+				&.pageInput{
+					width: 31px;
+				}
+				&.pageBtn{
+					width: 37px;
+					&:hover{
+						cursor: pointer;
+						color: @word_orange;
+					}
+				}
+			}
+		}
+	}
+}
+.footBlock{
+	margin-top: 30px;
+	width: 100%;
+	background-color: @main_black;
+	font: @word_14cn;
+	color: #bbbbbb;
+	.outLinkBlock{
+		padding-top: 41px;
+		height: 34px;
+		border-bottom: 2px solid #4e4e4e;
+		.outLink{
+			display: inline-block;
+			padding-left:10px;
+			padding-right: 15px;
+			border-right: 1px solid #bbbbbb;
+			&:hover{
+				cursor: pointer;
+				color: @word_orange;
+			}
+		}
+	}
+	.otherLinkBlock{
+		padding-top: 21px;
+		height: 54px;
+		.otherLink{
+			display: inline-block;
+			border-right: 1px solid #bbbbbb;
+			padding: 0 15px;
+			&:first-child{
+				padding-left: 0;
+			}
+			&:hover{
+				cursor: pointer;
+				color: @word_orange;
+			}
+		}
+		.emailSpan{
+			display: inline-block;
+			border-right: 1px solid #bbbbbb;
+			padding: 0 15px;
+			&last-child{
+				border: 0;
+			}
+		}
+	}
+}

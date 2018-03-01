@@ -1,0 +1,74 @@
+<link rel="stylesheet" type="text/css" href="/css/pages/index.css">
+<div class="mainBlock">
+    <div class="centerBlock">
+        <div class="mb_layout_floatleft">
+            <!-- left Nav -->
+            <?php $this->partial('layout/indexleft') ?>
+        </div>
+        <div class="mb_layout_floatRight">
+            <div class="mainContentBlock">
+                <p class="titleBlock">
+                    <span>您当前所在位置：兑换商城</span>
+                </p>
+                <div class="indexContent">
+                    <div class="queryBlock">
+                        <div class="queryGroup">
+                            <span>商家选择：</span>
+                            <?php if(empty($busines)): ?>
+                                <input type="text"  class="selectForm" data-id="0" placeholder="全部" readonly="readonly">
+                            <?php else: ?>
+                                <input type="text"  class="selectForm" data-id="<?php echo @$busines['id'] ?>" placeholder="<?php echo @$busines['name'] ?>" readonly="readonly">
+                            <?php endif; ?>
+                            <ul class="selectList">
+                                <?php if(!empty($busines)): ?>
+                                    <li data-id="0">全部</li>
+                                <?php endif; ?>
+                                <?php if(!empty($business)): ?>
+                                    <?php foreach ($business as $item): ?>
+                                        <li data-id="<?php echo @$item['id'] ?>"><?php echo @$item['name'] ?></li>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- goods List -->
+                    <div class="goodsListBlock">
+                        <!-- each goods -->
+                        <?php if(!empty($items)): ?>
+                            <?php foreach ($items as $item): ?>
+                                <div class="eachGoodsBlock">
+                                    <img src="<?php echo @$item['thumb'] ?>">
+                                    <p class="goodstitle"><?php echo @$item['title'] ?></p>
+                                    <p class="goodsInfo">
+                                        <span class="goodsPrice"><?php echo @$item['price'] ?></span>
+                                        <span class="priceUnit"><?php echo @$item['currency'] ?>/个</span>
+                                    </p>
+                                    <p class="contactSaler">
+                                        <span><?php echo @$item['name']; ?></span>
+                                        <img src="/img/13contactIcon.png">
+                                    </p>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+<!--                    <div class="pageingBlock">-->
+<!--                        <span class="clickable">首页</span>-->
+<!--                        <span class="clickable">上一页</span>-->
+<!--                        <span class="clickable checked">1</span>-->
+<!--                        <span class="clickable">2</span>-->
+<!--                        <span class="clickable">3</span>-->
+<!--                        <span class="ellipsis">...</span>-->
+<!--                        <span class="clickable">9</span>-->
+<!--                        <span class="clickable">下一页</span>-->
+<!--                        <span class="clickable">尾页</span>-->
+<!--                        <span>跳转到</span>-->
+<!--                        <input type="text" class="pageInput">-->
+<!--                        <input type="button" value="GO" class="pageBtn">-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="mb_layout_clearBoth"></div>
+    </div>
+</div>
+<script src="/js/pages/index/buiness.js"></script>

@@ -1,0 +1,304 @@
+@import "public";
+.conversionRate{
+	color: @word_orange;
+}
+.formTable{
+	width: 100%;
+	tr{
+		td{
+			font:@word_14cn;
+			color: @word_black;
+			padding-bottom: 19px;
+			&:first-child{
+				width: 318px;
+				text-align: right;
+			}
+			&:last-child{
+				text-align: left;	
+			}
+			input[type=text],input[type=password]{
+				border: 1px solid #e0e0e0;
+				padding:0 10px;
+				height: 30px;
+				border-radius: @other_radius;
+				&.normalInputText{
+					width: 340px;
+				}
+				&.codeInputText{
+					width: 130px;
+				}
+				&.rollOutNumberInputText{
+					width: 230px;
+				}
+			}
+			input[type=button]{
+				width: 100px;
+				height: 36px;
+				border: 0;
+				background-color: @btn_orange;
+				color: @word_white;
+				border-radius: @btn_radius;
+				&:hover{
+					cursor: pointer;
+					opacity: 0.8;
+				}
+			}
+			.codeImg{
+				width: 90px;
+				height: 30px;
+				vertical-align: middle;
+				margin-bottom: 2px;
+			}
+			.wrongMsg{
+				display: none;
+				img{
+					width: 15px;
+					vertical-align: middle;
+					margin-bottom: 2px;
+				}
+				.wrongWords{
+					font: @word_12cn;
+					color: @word_red;
+				}
+			}
+			.realRollOutBlock{
+				top: 40px;
+				left: 10px;
+				font: @word_12cn;
+				color: @word_orange;
+				position: absolute;
+				display: block;
+			}
+		}
+		&:last-child{
+			td{
+				text-align: center;
+			}
+		}
+	}
+}
+.recordTable{
+	width: 100%;
+	tr{
+		td{
+			font: @word_14cn;
+			text-align: center;
+		}
+		&.titleRow{
+			td{
+				background-color: @main_darkwhite;
+				color: @word_black;
+				height: 41px;
+			}
+		}
+		&.dataRow{
+			td{
+				background-color: @main_white;
+				color: @word_gray;
+				height: 45px;
+				border-bottom: 2px dashed #e0e0e0;
+				input{
+					width: 60px;
+					height: 24px;
+					border: 0;
+					background-color: @btn_blue;
+					border-radius: 12px;
+					color: @word_white;
+					font: @word_14cn;
+					&:hover{
+						cursor: pointer;
+						background-color: @btn_orange;
+					}
+				}
+			}
+		}
+	}
+}
+.rollInContent{
+	padding-bottom: 88px;
+	.title{
+		text-align: center;
+		font: @word_18cn;
+		height: 76px;
+		line-height: 76px;
+		img{
+			width: 18px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+	}
+	.cartInfo{
+		border-top:1px dashed #e0e0e0;
+		border-bottom:1px dashed #e0e0e0;
+		padding-bottom: 4px;
+		.cardInfoWords{
+			padding-left: 299px;
+			text-align: left;
+			font: @word_14cn;
+			color: @word_black;
+			margin-bottom: 37px;
+		}
+	}
+}
+.rollOutContent{
+	.title{
+		text-align: center;
+		font: @word_18cn;
+		height: 76px;
+		line-height: 76px;
+		img{
+			width: 18px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+	}
+	.formTable{
+		tr{
+			&:nth-child(3){
+				td{
+					padding-bottom: 39px;
+				}
+			}
+			&:nth-child(4){
+				td{
+					padding-bottom: 37px;
+				}
+			}
+			&:nth-child(5){
+				td{
+					padding-bottom: 39px;
+				}
+			}
+			&:nth-child(7){
+				td{
+					padding-bottom: 39px;
+				}
+			}
+		}
+	}
+	
+}
+.rollOutSuccessContent,.rollInSuccessContent{
+	text-align: center;
+	.successTitle{
+		padding-top: 102px;
+		margin-bottom: 32px;
+		font: @word_22cn;
+		color: @word_black;
+		height: 27px;
+		line-height: 27px;
+		img{
+			width: 27px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+	}
+	.successExplain{
+		font:@word_14cn;
+		color: @word_gray;
+	}
+}
+.propertyContent{
+	.title{
+		text-align: left;
+		font: @word_18cn;
+		height: 56px;
+		line-height: 56px;
+		img{
+			width: 18px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+	}
+}
+.inOutContent{
+	.title{
+		text-align: left;
+		font: @word_18cn;
+		height: 56px;
+		line-height: 56px;
+		img{
+			width: 18px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+	}
+	.queryBlock{
+		padding-bottom: 14px;
+		.queryGroup{
+			margin-right: 12px;
+			input[type=date]{
+				width: 110px;
+			}
+			input[type=text]{
+				width: 70px;
+				background-position: 80px 50%;
+			}
+			.selectList{
+				width: 102px;
+				top: 31px;
+			}
+		}
+		
+	}
+	.recordTable{
+		tr{
+			td{
+				&:first-child{
+					width: 135px;
+				}
+				&:last-child{
+					width: 60px;
+				}
+			}
+		}
+	}
+	.pageingBlock{
+		height: 82px;
+		padding-top: 29px;
+	}
+}
+.exchangeContent{
+	.title{
+		text-align: left;
+		font: @word_18cn;
+		height: 56px;
+		line-height: 56px;
+		img{
+			width: 18px;
+			vertical-align: middle;
+			margin-bottom: 3px;
+		}
+	}
+	.queryBlock{
+		padding-bottom: 14px;
+		.queryGroup{
+			margin-right: 12px;
+			input[type=date]{
+				width: 110px;
+			}
+			input[type=text]{
+				width: 70px;
+				background-position: 80px 50%;
+			}
+			.selectList{
+				width: 102px;
+				top: 31px;
+			}
+		}
+		
+	}
+	.recordTable{
+		tr{
+			td{
+				&:first-child{
+					width: 135px;
+				}
+			}
+		}
+	}
+	.pageingBlock{
+		height: 82px;
+		padding-top: 29px;
+	}
+}
