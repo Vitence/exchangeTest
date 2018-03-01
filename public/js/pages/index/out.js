@@ -62,6 +62,8 @@ $(document).delegate('#out ','click',function(){
             errMsg('图片验证码错误');
         }else if(json.code == 1030) {
             errMsg('余额不足');
+        }else if(json.code == 1040) {
+            errMsg('您还未身份认证，请先身份认证');window.location.href='/index/authentication';
         }else{
             successMsg('转出失败请重试');
         }

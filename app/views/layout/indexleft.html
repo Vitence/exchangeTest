@@ -1,7 +1,7 @@
 <?php $action = \Phalcon\Di::getDefault()->getDispatcher()->getActionName(); ?>
 <div class="leftNavBlock">
     <ul>
-        <li class="firstLevel" <?php echo strtolower($action) == 'index' ? 'checked' : '' ?> onclick="location.href='/'">
+        <li class="firstLevel <?php echo strtolower($action) == 'index' ? 'checked' : '' ?>" onclick="location.href='/'">
             <p class="exchangeShop">兑换商城</p>
         </li>
         <li class="firstLevel">

@@ -112,8 +112,17 @@ where ec.`status` = 0 '.($businessId > 0 ?  'AND ec.business_id = '.$businessId.
             if (strtolower($imgCode) != $this->session->get('imgCode')){
                 $this->jsonReturn($dataToken,'1001','图片验证码错误');
             }
-            
             $userInfo = $this->userInfo;
+            $auth = ExAuthentication::findRow(array('user_id'=>$userInfo['id']));
+            if($auth){
+                $auth = $auth->toArray();
+                if($auth['status'] != 1){
+                    $this->jsonReturn($dataToken,'1040');
+                }
+            }else{
+                $this->jsonReturn($dataToken,'1040');
+            }
+            
             $user = ExUsers::itemById($userInfo['id']);
             $checkPassword = UserLogic::checkTradingPassword($user, $payPassword);
             if(!$checkPassword){
